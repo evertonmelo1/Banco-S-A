@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_finame_num_programa" label="Número Programa" language="en" table="x_698612_dtt_banco_bens_finame">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_finame_num_programa</element>
+            <help/>
+            <hint/>
+            <label>Número Programa</label>
+            <language>en</language>
+            <name>x_698612_dtt_banco_bens_finame</name>
+            <plural>Número Programas</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>luiz</sys_created_by>
+            <sys_created_on>2022-01-26 17:08:07</sys_created_on>
+            <sys_id>f70f90e9dbd101106d8672c7f49619b0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Número Programa</sys_name>
+            <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
+            <sys_update_name>sys_documentation_x_698612_dtt_banco_bens_finame_u_finame_num_programa_en</sys_update_name>
+            <sys_updated_by>luiz</sys_updated_by>
+            <sys_updated_on>2022-01-26 17:08:07</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

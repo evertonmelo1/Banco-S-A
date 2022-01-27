@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_regex">
+    <question_regex action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <name>CPF</name>
+        <regex>(\d{3})(\d{3})(\d{3})(\d{2})</regex>
+        <regex_flag>2</regex_flag>
+        <sys_class_name>question_regex</sys_class_name>
+        <sys_created_by>everton</sys_created_by>
+        <sys_created_on>2022-01-27 13:06:38</sys_created_on>
+        <sys_id>fd40bcb5db1101106d8672c7f4961960</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>CPF</sys_name>
+        <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
+        <sys_update_name>question_regex_fd40bcb5db1101106d8672c7f4961960</sys_update_name>
+        <sys_updated_by>everton</sys_updated_by>
+        <sys_updated_on>2022-01-27 13:14:44</sys_updated_on>
+        <validation_message>FORMATO DE CPF INVALIDO</validation_message>
+    </question_regex>
+    <sys_translated_text action="delete_multiple" query="documentkey=fd40bcb5db1101106d8672c7f4961960"/>
+</record_update>

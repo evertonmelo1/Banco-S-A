@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_vencimento_primeira_parcela" label="Vencimento 1ª Parcela" language="en" table="x_698612_dtt_banco_dtt_bens_cdc">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_vencimento_primeira_parcela</element>
+            <help/>
+            <hint/>
+            <label>Vencimento 1ª Parcela</label>
+            <language>en</language>
+            <name>x_698612_dtt_banco_dtt_bens_cdc</name>
+            <plural>Vencimento 1ª Parcelas</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>evandro</sys_created_by>
+            <sys_created_on>2022-01-26 17:26:46</sys_created_on>
+            <sys_id>7053a0eddbd101106d8672c7f496196a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Vencimento 1ª Parcela</sys_name>
+            <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
+            <sys_update_name>sys_documentation_x_698612_dtt_banco_dtt_bens_cdc_u_vencimento_primeira_parcela_en</sys_update_name>
+            <sys_updated_by>evandro</sys_updated_by>
+            <sys_updated_on>2022-01-26 17:26:46</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
