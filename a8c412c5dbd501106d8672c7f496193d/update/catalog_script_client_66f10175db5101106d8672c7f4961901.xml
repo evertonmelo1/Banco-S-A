@@ -37,11 +37,8 @@
 		
 	
 	};
-
-	}
-	
-	// PARA CNPJ
-	else{
+// PARA CNPJ
+	}else{
 	
 		campo = {
 		nome: 'u_cpf_cnpj', 
@@ -94,15 +91,15 @@ function set_value(obj) {
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>66f10175db5101106d8672c7f4961901</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Formata CPF/CNPJ</sys_name>
         <sys_overrides/>
         <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
         <sys_policy/>
         <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
         <sys_update_name>catalog_script_client_66f10175db5101106d8672c7f4961901</sys_update_name>
-        <sys_updated_by>evandro</sys_updated_by>
-        <sys_updated_on>2022-01-27 14:36:35</sys_updated_on>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-18 00:21:37</sys_updated_on>
         <table/>
         <type>onChange</type>
         <ui_type>10</ui_type>

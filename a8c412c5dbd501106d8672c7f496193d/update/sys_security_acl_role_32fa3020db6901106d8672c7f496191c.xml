@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-02-05 02:51:54</sys_created_on>
+        <sys_id>32fa3020db6901106d8672c7f496191c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_698612_dtt_banco_u_cmdb_ci_hardware_infinity.u_infinity_user</sys_name>
+        <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
+        <sys_security_acl display_value="x_698612_dtt_banco_u_cmdb_ci_hardware_infinity">62fa3020db6901106d8672c7f4961919</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_32fa3020db6901106d8672c7f496191c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-05 03:22:18</sys_updated_on>
+        <sys_user_role display_value="u_infinity_user" name="u_infinity_user">3fe10164db6901106d8672c7f49619e7</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>
