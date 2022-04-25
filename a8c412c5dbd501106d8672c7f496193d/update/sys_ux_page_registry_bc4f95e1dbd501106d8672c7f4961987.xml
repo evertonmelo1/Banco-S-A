@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_registry">
+    <sys_ux_page_registry action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <admin_panel/>
+        <admin_panel_table/>
+        <auth_routes/>
+        <page display_value="UI Builder">399fcc0077733300cf3a4a2a6910611b</page>
+        <path>teste</path>
+        <root_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</root_macroponent>
+        <sys_class_name>sys_ux_page_registry</sys_class_name>
+        <sys_created_by>everton</sys_created_by>
+        <sys_created_on>2022-01-26 21:49:38</sys_created_on>
+        <sys_id>bc4f95e1dbd501106d8672c7f4961987</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BANCO UI TEST</sys_name>
+        <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
+        <sys_update_name>sys_ux_page_registry_bc4f95e1dbd501106d8672c7f4961987</sys_update_name>
+        <sys_updated_by>everton</sys_updated_by>
+        <sys_updated_on>2022-01-26 21:49:38</sys_updated_on>
+        <title>BANCO UI TEST</title>
+    </sys_ux_page_registry>
+</record_update>

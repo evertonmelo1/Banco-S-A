@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-25 12:48:54</sys_created_on>
+        <sys_id>2c2a12c9db9901106d8672c7f49619c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_698612_dtt_banco_avalista.x_698612_dtt_banco.admin</sys_name>
+        <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
+        <sys_security_acl display_value="x_698612_dtt_banco_avalista">6c2a12c9db9901106d8672c7f49619c4</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_2c2a12c9db9901106d8672c7f49619c7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-25 12:48:54</sys_updated_on>
+        <sys_user_role display_value="x_698612_dtt_banco.admin" name="x_698612_dtt_banco.admin">38195e85db9901106d8672c7f4961997</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

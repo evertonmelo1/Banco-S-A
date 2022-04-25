@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_finame_prazo_total" label="Prazo Total" language="en" table="x_698612_dtt_banco_bens_finame">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_finame_prazo_total</element>
+            <help/>
+            <hint/>
+            <label>Prazo Total</label>
+            <language>en</language>
+            <name>x_698612_dtt_banco_bens_finame</name>
+            <plural>Prazo Totals</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>luiz</sys_created_by>
+            <sys_created_on>2022-01-26 17:49:49</sys_created_on>
+            <sys_id>1e98a025db1501106d8672c7f496190a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Prazo Total</sys_name>
+            <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
+            <sys_update_name>sys_documentation_x_698612_dtt_banco_bens_finame_u_finame_prazo_total_en</sys_update_name>
+            <sys_updated_by>luiz</sys_updated_by>
+            <sys_updated_on>2022-01-26 17:49:49</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

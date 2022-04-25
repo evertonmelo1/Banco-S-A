@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="DTT - Bens Finame" max_length="40" name="x_698612_dtt_banco_bens_finame" sizeclass="6" type="collection">
+        <element label="Cód. Custo Financeiro" max_length="40" name="u_cod_custo_financeiro" type="string"/>
+        <element label="Cod. Finame" max_length="40" name="u_cod_finame" type="string"/>
+        <element label="Cod. Programa" max_length="40" name="u_cod_programa" type="string"/>
+        <element label="Custo Financeiro" max_length="40" name="u_custo_financeiro" type="string"/>
+        <element label="Cod. Finalidade" max_length="40" name="u_finame_cod_finalidade" type="string"/>
+        <element label="Cod. Plano Pagamento" max_length="40" name="u_finame_cod_plano_pagamento" type="string"/>
+        <element label="Cod. Produto" max_length="40" name="u_finame_cod_produto" type="string"/>
+        <element label="Descrição do Produto" max_length="40" name="u_finame_descricao_produto" type="string"/>
+        <element label="Fabricante" max_length="40" name="u_finame_fabricante" type="string"/>
+        <element label="Finalidade" max_length="40" name="u_finame_finalidade" type="string"/>
+        <element label="Número Programa" max_length="40" name="u_finame_num_programa" type="string"/>
+        <element label="Plano Pagamento" max_length="40" name="u_finame_plano_pagamento" type="string"/>
+        <element label="Prazo Amortização" max_length="40" name="u_finame_prazo_amortizacao" type="string"/>
+        <element label="Prazo Carência" max_length="40" name="u_finame_prazo_carencia" type="string"/>
+        <element label="Prazo Total" max_length="40" name="u_finame_prazo_total" type="string"/>
+        <element label="Produto" max_length="40" name="u_finame_produto" type="string"/>
+        <element label="Quantidade do Bem" max_length="40" name="u_finame_quantidade_bem" type="string"/>
+        <element label="Valor do Bem" max_length="40" name="u_finame_valor_bem" type="string"/>
+        <element label="Valor Entrada" max_length="40" name="u_finame_valor_entrada" type="string"/>
+        <element label="Valor Total do Bem" max_length="40" name="u_finame_valor_total_bem" type="string"/>
+        <element label="Valor Total Financiado" max_length="40" name="u_finame_valor_total_financiado" type="string"/>
+        <element label="Solicitação" max_length="32" name="u_solicitacao" reference="x_698612_dtt_banco_solicitacoes" type="reference"/>
+        <index name="index">
+            <element name="u_solicitacao"/>
+        </index>
+    </element>
+</database>

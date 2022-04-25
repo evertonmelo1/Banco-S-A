@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update node_type="sys_portal_page" unload_date="2022-01-27 16:59:15">
+    <sys_portal_page action="INSERT_OR_UPDATE">
+        <layout display_value="layout_2_across">f6defafa0a0a0b12000d5016bd12ff06</layout>
+        <order/>
+        <read_roles/>
+        <roles/>
+        <selectable>false</selectable>
+        <sys_class_name>sys_portal_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-25 13:44:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>acf6ae05dbd901106d8672c7f496190f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>catalog_op_banco</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
+        <sys_update_name>sys_portal_page_acf6ae05dbd901106d8672c7f496190f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-25 13:44:53</sys_updated_on>
+        <title>catalog_op_banco</title>
+        <user/>
+        <view>catalog_op_banco</view>
+    </sys_portal_page>
+</record_update>
