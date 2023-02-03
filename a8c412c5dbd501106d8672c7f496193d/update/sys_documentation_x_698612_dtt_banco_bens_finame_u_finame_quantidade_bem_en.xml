@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_finame_quantidade_bem" label="Quantidade do Bem" language="en" table="x_698612_dtt_banco_bens_finame">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_finame_quantidade_bem</element>
+            <help/>
+            <hint/>
+            <label>Quantidade do Bem</label>
+            <language>en</language>
+            <name>x_698612_dtt_banco_bens_finame</name>
+            <plural>Quantidade do Bems</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>luiz</sys_created_by>
+            <sys_created_on>2022-01-26 14:18:46</sys_created_on>
+            <sys_id>c7483b59db5101106d8672c7f49619df</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Quantidade do Bem</sys_name>
+            <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
+            <sys_update_name>sys_documentation_x_698612_dtt_banco_bens_finame_u_finame_quantidade_bem_en</sys_update_name>
+            <sys_updated_by>luiz</sys_updated_by>
+            <sys_updated_on>2022-01-26 14:18:46</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

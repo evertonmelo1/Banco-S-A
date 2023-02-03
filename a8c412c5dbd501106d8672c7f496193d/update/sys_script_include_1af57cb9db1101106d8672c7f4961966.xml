@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_698612_dtt_banco.Util_Mascara_Campos</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>Util_Mascara_Campos</name>
+        <script><![CDATA[var Util_Mascara_Campos = Class.create();
+Util_Mascara_Campos.prototype = {
+	initialize: function () { },
+
+	type: 'Util_Mascara_Campos',
+
+	validarCampo: function (campo) {
+
+		campo.valido = this.validar_tipo(campo.tipo, campo.atual);
+
+		if (campo.valido) {
+			//validar se deve formatar
+			campo.formatado = this.formatar_tipo(campo.tipo, campo.atual , campo.formatar);
+
+			campo.igual = this.comparar_valores(campo);
+		}else{
+
+		}
+
+		return campo;
+	},
+
+	validar_tipo: function (tipo, valor) {
+		// verifica se o valor é do tipo informado
+
+		if (tipo == 'inteiro') {
+			return this.valida_inteiro(valor);
+		}
+		if (tipo == 'numerico') {
+			return this.valida_numerico(valor);
+		}
+		if (tipo == 'decimal') {
+			return this.valida_decimal(valor);
+		}
+		if (tipo == 'texto') {
+			return this.valida_texto(valor);
+		}
+		if (tipo == 'monetario') {
+			return this.valida_monetario(valor);
+		}
+		if (tipo == 'palavra') {
+			return this.valida_palavra(valor);
+		}
+		if (tipo == 'telefone') {
+			return this.valida_telefone(valor);
+		}
+		if (tipo == 'email') {
+			return this.valida_email(valor);
+		}
+		if (tipo == 'cpf') {
+			return this.valida_cpf(valor);
+		}
+		if (tipo == 'cnpj') {
+			return this.valida_cnpj(valor);
+		}
+		if (tipo == 'cep') {
+			return this.valida_cep(valor);
+		}
+		if (tipo == 'cone'){
+			return this.valida_cone(valor);
+		}
+	},
+
+	formatar_tipo: function (tipo, valor,formatar) {
+		// aplica a máscara ao valor atual
+
+		if (tipo == 'inteiro') {
+			return this.formatar_inteiro(valor, formatar);
+		}	
+		if (tipo == 'numerico') {
+			return this.formatar_numerico(valor, formatar);
+		}
+		if (tipo == 'decimal') {
+			return this.formatar_decimal(valor);
+		}
+		if (tipo == 'texto') {
+			return valor;
+		}
+		if (tipo == 'monetario') {
+			return this.formatar_monetario(valor);
+		}
+		if (tipo == 'palavra') {
+			return this.formatar_palavra(valor);
+		}
+		if (tipo == 'telefone') {
+			return this.formatar_telefone(valor);
+		}
+		if (tipo == 'email') {
+			return this.formatar_email(valor);
+		}
+		if (tipo == 'cpf') {
+			return this.formatar_cpf(valor);
+		}
+		if (tipo == 'cnpj') {
+			return this.formatar_cnpj(valor);
+		}
+		if (tipo == 'cep') {
+			return this.formatar_cep(valor);
+		}
+		if (tipo == 'cone'){
+			return this.formatar_cone(valor);
+		}
+	},
+
+	comparar_valores: function (obj) {
+		// compara se o valor atual é o mesmo que o anterior (no caso de um possuir máscara e o outro não)
+		var atual = obj.atual;
+		var antigo = '';
+		if (this.validar_tipo(obj.tipo, obj.antigo)) {
+			antigo = this.formatar_tipo(obj.tipo, obj.antigo, true);
+		}
+		var result = atual == antigo;
+		return result;
+	},
+
+	valida_inteiro: function (valor) {
+		var novo = valor;
+
+		// acusa carateres diferentes de numeros, ponto ou hifen
+		if (/[^0-9\.\-]/g.test(novo)) {
+			return false;
+		}
+
+		// Valida: com ou sem 'espaço' + unidades de milhar
+		var path = /^(-{1})?((([1-9]{1}[0-9]{0,2}){1}(\.{1}\d{3})*)|([0]{1}))$/g;
+		if (!path.test(novo)) {
+			path = /^(-{1})?([1-9]{1}[0-9]*|[0]{1}){1}$/g;
+			if (!path.test(novo)) {
+				return false;
+			}
+		}
+
+		novo = valor.replace(/\.|\s/g, '');
+
+		try {
+			novo = parseInt(novo);
+		} catch (error) {
+			return false;
+		}
+		return true;
+	},
+	valida_numerico: function (valor) {
+		var novo = valor;
+
+		// acusa carateres diferentes de numeros, ponto ou hifen
+		if (/[^0-9\.\-]/g.test(novo)) {
+			return false;
+		}
+
+		// Valida: com ou sem 'espaço' + unidades de milhar
+		var path = /^((([1-9]{1}[0-9]{0,2}){1}(\.{1}\d{3})*)|([0]{1}))$/g;
+		if (!path.test(novo)) {
+			path = /^([0-9]{1}[0-9]*|[0]{1}){1}$/g;
+			if (!path.test(novo)) {
+				return false;
+			}
+		}
+
+		novo = valor.replace(/\.|\s/g, '');
+
+		try {
+			novo = parseInt(novo);
+		} catch (error) {
+			return false;
+		}
+		return true;
+	},
+	valida_decimal: function (valor) {
+		var novo = valor;
+
+		// acusa carateres diferentes de numeros, virgula, ponto ou hifen
+		if (/[^0-9\,\.\-]/g.test(valor)) {
+			return false;
+		}
+
+		//Valida: com ou sem 'espaço' + unidades de milhar e casas decimais
+		var path = /^(-{1})?(([1-9]{1}[0-9]{0,2}){1}(\.{1}\d{3})*|(0{1}){1})(,{1}\d+)?$/g;
+
+		if (!path.test(novo)) {
+			path = /^(-{1})?(([1-9]{1}[0-9]*)+|(0{1}){1})(,{1}\d+)?$/g;
+			if (!path.test(novo)) {
+				return false;
+			}
+		}
+
+		novo = valor.replace(/\.|\s/g, '');
+		novo = novo.replace(/,/g, '.');
+		try {
+			novo = parseFloat(novo);
+
+		} catch (error) {
+			return false;
+		}
+		return true;
+	},
+
+	valida_texto: function (valor) {
+		var novo;
+		valor = valor.replace(/[0-9]/g, '');
+		novo = valor.length;
+
+		if (novo < 4) {
+			return false;
+		}
+
+		novo = valor.split(' ');
+
+		if (novo.length < 2) {
+			return false;
+		}
+		return true;
+	},
+
+	valida_monetario: function (valor) {
+
+		// acusa carateres diferentes de numeros, virgula, ponto ou hifen, R$ e espaço
+		if (/[^0-9\,\.\-\s(R\$)]/g.test(valor)) {
+			return false;
+		}
+		//var novo = valor.replace(/[^0-9\,\.\-\s(R\$)]/g);
+
+		var novo = valor;
+		//Valida: com ou sem R$ + com ou sem 'espaço' + unidades de milhar e casas decimais
+		var path = /^(R{1}\${1}\s?)?(-{1})?(([1-9]{1}[0-9]{0,2}){1}(\.{1}\d{3})*|(0{1}){1})(,{1}\d+)?$/g;
+
+		if (!path.test(novo)) {
+			path = /^(R{1}\${1}\s?)?(-{1})?(([1-9]{1}[0-9]*)+|(0{1}){1})(,{1}\d+)?$/g;
+			if (!path.test(novo)) {
+				return false;
+			}
+		}
+		novo = valor.replace(/\.|R|\$|\s/g, '');
+		novo = novo.replace(/,/g, '.');
+		try {
+			novo = parseFloat(novo);
+
+		} catch (error) {
+			return false;
+		}
+		return true;
+	},
+
+	valida_palavra: function (valor) {
+		var novo;
+
+		novo = valor.split(' ');
+
+		if (novo.length > 1) {
+			return false;
+		}
+
+		novo = valor.replace(/[^a-zA-Z]/g, '');
+		novo = novo.length;
+
+		if (novo < 2) {
+			return false;
+		}
+		return true;
+	},
+
+	valida_telefone: function (valor) {
+		var novo;
+
+		// apaga tudo que não é número
+		novo = valor.replace(/[^0-9]/g, '').length;
+
+		if (novo < 10 || novo > 11) {
+			return false;
+		}
+		return true;
+	},
+
+	valida_email: function (valor) {
+		var path = /\s/g;
+
+		// procura espaço em branco
+		if (path.test(valor)) return false;
+
+		if (valor.length < 7) return false;
+
+		path = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/i;
+		var result = path.test(valor);
+
+		return result;
+	},
+
+	valida_cpf: function (valor) {
+		// procura espaço em branco
+		if (/\s/g.test(valor)) return false;
+
+		if (!valor) return false;
+
+		valor = valor.replace(/[^0-9]/g, '');
+
+		if (valor.length != 11) return false;
+		// valores iguais ex.: 00000000000 11111111111
+		if (this.caracter_repetido(valor)) return false;
+
+		var digitos = [valor.substring(9, 10), valor.substring(10, 11)];
+
+		var calc = function (valor, digito, limit) {
+			var total = 0;
+			for (var i = 0; i < limit - 1; i++) {
+				total += parseInt(valor.substring(i, i + 1)) * (limit - i);
+			}
+			total = 11 - (total % 11);
+			total = total > 9 ? 0 : total;
+			return (total == parseInt(digito));
+		};
+
+		if (calc(valor, digitos[0], 10) && calc(valor, digitos[1], 11)) return true;
+
+		return false;
+	},
+
+	valida_cnpj: function (valor) {
+		if (!valor) return false;
+
+		valor = valor.replace(/[^\d]+/g, '');
+
+		if (valor == '') return false;
+
+		if (valor.length != 14) return false;
+
+		// valores iguais ex.: 00000000000000 11111111111111
+		if (this.caracter_repetido(valor)) return false;
+
+		// Valida DVs
+		tamanho = valor.length - 2;
+		numeros = valor.substring(0, tamanho);
+		digitos = valor.substring(tamanho);
+		soma = 0;
+		pos = tamanho - 7;
+
+		for (i = tamanho; i >= 1; i--) {
+			soma += numeros.charAt(tamanho - i) * pos--;
+			if (pos < 2)
+				pos = 9;
+		}
+
+		resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+		if (resultado != digitos.charAt(0))
+			return false;
+
+		tamanho = tamanho + 1;
+		numeros = valor.substring(0, tamanho);
+		soma = 0;
+		pos = tamanho - 7;
+
+		for (i = tamanho; i >= 1; i--) {
+			soma += numeros.charAt(tamanho - i) * pos--;
+			if (pos < 2)
+				pos = 9;
+		}
+
+		resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+		if (resultado != digitos.charAt(1))
+			return false;
+
+		return true;
+	},
+
+	valida_cep: function (valor) {
+		var path = /\s/g;
+		// procura espaço em branco
+		if (!valor) return false;
+		if (path.test(valor)) return false;
+		valor = valor.replace(/[^0-9]/g, '');
+		if (valor.length != 8) return false;
+		return true;
+	},
+
+	valida_cone: function(valor){
+
+		var novo;
+
+		// apaga tudo que não é número
+		novo = valor.replace(/[^0-9]/g, '').length;
+
+		if (novo !=18) {
+			return false;
+		}
+		return true;
+	},
+		
+
+	formatar_telefone: function (numero) {
+		numero = numero.replace(/[^0-9]/g, '');
+		numero = numero.replace(/(\d{2})(\d{4,5})(\d{4})/g, "(\$1) \$2-\$3");
+		return numero;
+	},
+
+	formatar_cpf: function (cpf) {
+		cpf = cpf.replace(/[^0-9]/g, '');
+		cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g, "\$1.\$2.\$3\-\$4");
+		return cpf;
+	},
+
+	formatar_cnpj: function (cnpj) {
+		cnpj = cnpj.replace(/[^0-9]/g, '');
+		cnpj = cnpj.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g, "\$1.\$2.\$3\/\$4\-\$5");
+		return cnpj;
+	},
+
+	formatar_cep: function (cep) {
+		cep = cep.replace(/[^0-9]/g, '');
+		cep = cep.replace(/(\d{5})(\d{3})/g, "\$1-\$2");
+		return cep;
+	},
+	
+	formatar_cone: function (cone) {
+		cone = cone.replace(/[^0-9]/g, '');
+		cone = cone.replace(/(\d{4})(\d{4})(\d{10})/g, "\$1\/\$2\/\$3"); 
+	//	cone = cone.replace(/(\d{5})(\d{3})/g, "\$1-\$2");	
+		return cone;
+	},
+
+	formatar_email: function (email) {
+		email = email.replace(/[\s]/g, '');
+		email = email.toUpperCase();
+		return email;
+	},
+
+	formatar_palavra: function (palavra) {
+		palavra = palavra.replace(/[\s]/g, '');
+		palavra = palavra.toUpperCase();
+		return palavra;
+	},
+
+	formatar_inteiro: function (numero , formatar) {
+		numero = numero.replace(/[^0-9-]/g, '');
+		if (parseInt(numero) == 0) {
+			numero = '0';
+		}
+
+		if(formatar)
+			numero = this.numberMask(numero);
+
+		return numero;
+	},
+	formatar_numerico: function (numero , formatar) {
+		numero = numero.replace(/\.|\s/g, '');
+		numero = numero.replace(/[^0-9-]/g, '');
+		if (parseInt(numero) == 0) {
+			//numero = '0';
+		}
+
+		if(formatar)
+			numero = this.numberMask(numero);
+		return numero;
+	},
+	formatar_decimal: function (numero) {
+		numero = numero.replace(/[^0-9-,]/g, '');
+		var parte = numero.split(',');
+		if (parte.length == 1) {
+			parte[1] = '00';
+		} else if (parte[1].length < 2) {
+			parte[1] += '0';
+		}
+		numero = this.numberMask(parte[0]) + ',' + parte[1];
+		return numero;
+	},
+
+	formatar_monetario: function (numero) {
+		numero = numero.replace(/[^0-9-,]/g, '');
+		var parte = numero.split(',');
+
+		if (parte.length == 1) {
+			parte[1] = '00';
+		} else if (parte[1].length < 2) {
+			parte[1] += '0';
+		}
+		numero = 'R$ ' + this.numberMask(parte[0]) + ',' + parte[1];
+		return numero;
+	},
+
+	numberMask: function (value) {
+		var newValue = '';
+		var negativo = parseInt(value) >= 0 ? '' : '-';
+		value = value.replace(/[^0-9]/g, '');
+
+		var size = value.length;
+		var mod = size % 3;
+		var vezes = (size - mod) / 3;
+
+		if (vezes > 0 && size > 3) {
+			for (var i = 1; i <= vezes; i++) {
+				var element = value.substr(size - (3 * i), 3);
+				var ponto = '.';
+				if (i == vezes && mod == 0) {
+					ponto = '';
+				}
+				newValue = ponto + element + newValue;
+			}
+			var start = value.substr(0, mod);
+			value = start + newValue;
+		}
+		return negativo + value;
+	},
+
+	caracter_repetido: function (valor) {
+		for (var i = 1; i < valor.length; i++) {
+			if (valor.substring(i - 1, i) != valor.substring(i, i + 1)) return false;
+		}
+		return true;
+	}
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>everton</sys_created_by>
+        <sys_created_on>2022-01-27 13:28:18</sys_created_on>
+        <sys_id>1af57cb9db1101106d8672c7f4961966</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Util_Mascara_Campos</sys_name>
+        <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
+        <sys_update_name>sys_script_include_1af57cb9db1101106d8672c7f4961966</sys_update_name>
+        <sys_updated_by>everton</sys_updated_by>
+        <sys_updated_on>2022-01-27 13:28:18</sys_updated_on>
+    </sys_script_include>
+</record_update>

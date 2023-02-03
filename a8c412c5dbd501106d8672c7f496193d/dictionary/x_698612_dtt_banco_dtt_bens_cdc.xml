@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="DTT - Bens CDC" max_length="40" name="x_698612_dtt_banco_dtt_bens_cdc" sizeclass="1" type="collection">
+        <element label="Ano de Fabricação" max_length="40" name="u_ano_fabricacao" type="integer"/>
+        <element label="Ano do Modelo" max_length="40" name="u_ano_modelo" type="integer"/>
+        <element label="Código Molicar" max_length="10" name="u_codigo_molicar" type="string"/>
+        <element choice="1" label="Combustível" max_length="50" name="u_combustivel" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Gasolina" language="pt" sequence="1" value="G"/>
+                <element inactive_on_update="false" label="Gasolina" sequence="1" value="G"/>
+                <element inactive_on_update="false" label="Alcool" language="pt" sequence="2" value="A"/>
+                <element inactive_on_update="false" label="Alcool" sequence="2" value="A"/>
+                <element inactive_on_update="false" label="Diesel" language="pt" sequence="3" value="D"/>
+                <element inactive_on_update="false" label="Diesel" sequence="3" value="D"/>
+            </choice>
+        </element>
+        <element choice="1" label="Estado do Equipamento" max_length="20" name="u_estado_equipamento" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Novo" sequence="1" value="N"/>
+                <element inactive_on_update="false" label="Novo" language="pt" sequence="1" value="N"/>
+                <element inactive_on_update="false" label="Usado" language="pt" sequence="2" value="U"/>
+                <element inactive_on_update="false" label="Usado" sequence="2" value="U"/>
+            </choice>
+        </element>
+        <element label="Marca" max_length="50" name="u_marca" type="string"/>
+        <element label="Modelo" max_length="50" name="u_modelo" type="string"/>
+        <element label="Prazo" max_length="40" name="u_prazo" type="integer"/>
+        <element label="Quantidade do Bem" max_length="40" name="u_quantidade_bem" type="integer"/>
+        <element label="Solicitação" max_length="32" name="u_solicitacao" reference="x_698612_dtt_banco_solicitacoes" type="reference"/>
+        <element choice="1" label="Tabela" max_length="50" name="u_tabela" type="choice">
+            <choice/>
+        </element>
+        <element choice="1" label="Tipo do Bem" max_length="40" name="u_tipo_bem" type="choice">
+            <choice/>
+        </element>
+        <element label="Valor do Bem" max_length="20" name="u_valor_bem" type="currency"/>
+        <element label="Valor de Entrada" max_length="20" name="u_valor_entrada" type="currency"/>
+        <element label="Valor Parcela (PMT)" max_length="20" name="u_valor_parcela_pmt" type="currency"/>
+        <element label="Valor Total do Bem" max_length="20" name="u_valor_total_bem" type="currency"/>
+        <element label="Valor Total Financiado" max_length="30" name="u_valor_total_financiado" type="string"/>
+        <element label="Vencimento 1ª Parcela" max_length="40" name="u_vencimento_primeira_parcela" type="glide_date"/>
+        <element label="Versão" max_length="50" name="u_versao" type="string"/>
+        <index name="index">
+            <element name="u_solicitacao"/>
+        </index>
+    </element>
+</database>

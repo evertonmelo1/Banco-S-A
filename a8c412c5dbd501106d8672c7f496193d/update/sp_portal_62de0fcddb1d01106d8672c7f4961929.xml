@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
+    <sp_portal action="INSERT_OR_UPDATE">
+        <css_variables/>
+        <default>false</default>
+        <enable_ais>false</enable_ais>
+        <enable_favorites>false</enable_favorites>
+        <hide_portal_name>false</hide_portal_name>
+        <homepage display_value="index">46cc384147532100ba13a5554ee49009</homepage>
+        <icon/>
+        <kb_knowledge_base/>
+        <kb_knowledge_page display_value="kb_view2">26c2e030d7201200a9addd173e24d437</kb_knowledge_page>
+        <login_page/>
+        <logo>6c101fcddb1d01106d8672c7f4961942</logo>
+        <notfound_page display_value="404">3c2c9063cb11020000f8d856634c9c1f</notfound_page>
+        <quick_start_config/>
+        <sc_catalog/>
+        <sc_catalog_page display_value="sc_home">fe87a11147132100ba13a5554ee490b9</sc_catalog_page>
+        <sc_category_page/>
+        <search_application/>
+        <search_results_configuration/>
+        <sp_chat_queue/>
+        <sp_rectangle_menu display_value="SP Header Menu">d150fd31cb10020000f8d856634c9ce6</sp_rectangle_menu>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-25 16:47:02</sys_created_on>
+        <sys_id>62de0fcddb1d01106d8672c7f4961929</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Banco S A</sys_name>
+        <sys_package display_value="DTT - Banco S A" source="x_698612_dtt_banco">a8c412c5dbd501106d8672c7f496193d</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="DTT - Banco S A">a8c412c5dbd501106d8672c7f496193d</sys_scope>
+        <sys_update_name>sp_portal_62de0fcddb1d01106d8672c7f4961929</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-25 16:47:02</sys_updated_on>
+        <theme display_value="Stock - High Contrast">f84873986711320023c82e08f585ef6a</theme>
+        <title>Banco S A</title>
+        <ts_index_group/>
+        <url_suffix>bc</url_suffix>
+    </sp_portal>
+    <sys_translated_text action="delete_multiple" query="documentkey=62de0fcddb1d01106d8672c7f4961929"/>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#3333</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <file_name>logo</file_name>
+        <hash>65057f0f415c539787661f40072aba140b9a16142aec9b2940595e34dc54778e</hash>
+        <image_height>180</image_height>
+        <image_width>180</image_width>
+        <size_bytes>1080</size_bytes>
+        <size_compressed>1103</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-25 16:44:33</sys_created_on>
+        <sys_id>6c101fcddb1d01106d8672c7f4961942</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-25 16:44:33</sys_updated_on>
+        <table_name>ZZ_YYsp_portal</table_name>
+        <table_sys_id>62de0fcddb1d01106d8672c7f4961929</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="logo" sys_id="6c101fcddb1d01106d8672c7f4961942">6c101fcddb1d01106d8672c7f4961942</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-25 16:44:33</sys_created_on>
+        <sys_id>ac101fcddb1d01106d8672c7f4961942</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>ATgEx/uJUE5HDQoaCgAAAA1JSERSAAAAtAAAALQIAwAAAAoT9gAAAACrUExURQAAAP///4a8JSAgIHBwcNzc3Pv7+/f396CgoPDw8NXV1QQEBA4ODhwcHFlZWTw8PGBgYGlpaeXl5Sc3C4ODgzMzM7KysigoKMHBwaqqqpWVlVBQUEFBQVd6GGKKGwYIAnalIUNeE32vIkpnFCIvCRIaBWmTHRkjB42NjXl5ec/PzzAwMElJSVRUVLy8vK6urjdNDxAWBF+FGk1sFSw9DG6bHlh8GDtTEHqsImBQBIUAAANISURBVHic7dtrU+IwGIbhBCnlKBaKUlY5o5xUXHTZ///LFtzZpYW8hRfaJJ157s8Z55pOekiCQiCEEEIIIYQQQgghhBBCCCGEEEIIIWRdMrZSqVF+K/pevWraGSkeva8ceA+mrf87F73LmbZMc//GQe8uuGfDRGGit9PcN89mo7fsfCV7aCnnhuf2RWhZmGUQLeW9yZl9KVqWaxlEy4Y59eVo6RhTX4GWc1Pz+hq0fM8iWuaziHbNfPldh5btLKLlrT3o+s13i/rrLGjEoh0TH09qyk14SL3jxqjv7EQLUSvS6LKtaCGWJVL9aC1aLEh1YC9atKiJ7eq/Fc9GC4+61K8Wo0WbQBd1mznoOoFu6DZz0GJOqNWjU4zDuCPQ2l/lHHS1oB7tazaz0OJNPfpeL5mJ9tWjtb/JWeilenRJL5mJrqlHS90LXBZaEK9y3YsuHrqsHq77Q4+HJt7kS61kLvpdPfyHVjIXTaxgdL8SE0HrXify0J0sookrrXsZkAja7hsxUA+3+zlNfObVtZITeiPa/RonNj+s/mCqqke7eslMdEs92u5FALFfY/dyi3hM272wddSjrd5CWKgHa3/isdDEYlz7upaDrhCnL/qPQBnoW2J2eAfjxoOn7nN3vfqwAF0hbsPo4N6mn/vXc9M4ekaY5+FBzT15Vzedq302ukXsPkbOxwe5g4Zjk+gH6qCoEPrVx+jQnJL6THSLPLcNHW6tjs1b9cQU2qPPbPcLgInKvL0dzaCX1LmFjPwM4acanVtpR1daPvWo+26/PHwhzLm+JrSf3+VPg3ncWb6MvA3XFDqX+L0YbzqVG5pHfRI9sgsdekZ/kObkb8WrzO3QsfiYRg9tQkd+A/lJo3MWoQuRPZqMoKOrrGYmpsfBZzTxPtz1ZQ36aE96SKLXlqDd493dXyT60w60o/inAHJSD3tWoAPljuMXgR4kbb4E3SBOK4hL3U/8QvPR7pTc2FV/MqWwuuWSOzG/qa90FeZN8mYe2pnFb5/3jtVpmBnoRuf00UrlYGn7O52djzPBQX5x3t97CS26hqPk78GT6FLJcdrB1HtknalMNt3deqD/tEqJjBBCCCGEEEIIIYQQQgghhBBCCCGEzPYH5dsw8cNmqmYAAAAASUVORK5CYIJ2vdnxOAQAAA==</data>
+        <length>1460</length>
+        <position>1</position>
+        <sys_attachment display_value="logo" sys_id="6c101fcddb1d01106d8672c7f4961942">6c101fcddb1d01106d8672c7f4961942</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-25 16:44:33</sys_created_on>
+        <sys_id>20101fcddb1d01106d8672c7f4961943</sys_id>
+    </sys_attachment_doc>
+</record_update>

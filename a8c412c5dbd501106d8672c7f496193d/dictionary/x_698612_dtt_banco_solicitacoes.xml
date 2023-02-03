@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="DTT - Solicitações" max_length="40" name="x_698612_dtt_banco_solicitacoes" sizeclass="9" type="collection">
+        <element label="Cnae Investimento (Atividades Secundárias)" max_length="40" name="u_cnae_investimento_atividades_secundarias" type="string"/>
+        <element label="Cnae Principal" max_length="40" name="u_cnae_principal" type="string"/>
+        <element label="CPF/CNPJ" max_length="20" name="u_cpf_cnpj" type="string"/>
+        <element label="Isenção Tarifa Cadastro?" max_length="40" name="u_isencao_tarifa_cadastro" type="string"/>
+        <element label="Nome / Razão Social" max_length="200" name="u_nome_razao_social" type="string"/>
+        <element choice="1" label="Origem da Proposta" max_length="40" name="u_origem_proposta" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Agrishow" language="pb" value="agrishow"/>
+                <element inactive_on_update="false" label="Agrishow" value="agrishow"/>
+                <element inactive_on_update="false" label="Agrotins" value="agrotins"/>
+                <element inactive_on_update="false" label="Agrotins" language="pb" value="agrotins"/>
+                <element inactive_on_update="false" label="Concessionária" language="pb" value="concessionaria"/>
+                <element inactive_on_update="false" label="Concessionária" value="concessionaria"/>
+                <element inactive_on_update="false" label="Expointer" language="pb" value="expointer"/>
+                <element inactive_on_update="false" label="Expointer" value="expointer"/>
+            </choice>
+        </element>
+        <element display="true" label="Receita Operacional Bruta" max_length="15" name="u_receita_operacional_bruta" type="string"/>
+        <element choice="1" label="Setor Atividade" max_length="40" name="u_setor_atividade" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Agricola" language="pb" value="agricola"/>
+                <element inactive_on_update="false" label="Agricola" value="agricola"/>
+                <element inactive_on_update="false" label="Comércio" language="pb" value="comercio"/>
+                <element inactive_on_update="false" label="Comércio" value="comercio"/>
+                <element inactive_on_update="false" label="Construção Civil" language="pb" value="construcao_civil"/>
+                <element inactive_on_update="false" label="Construção Civil" value="construcao_civil"/>
+                <element inactive_on_update="false" label="Demais Atividades" value="demais_atividades"/>
+                <element inactive_on_update="false" label="Demais Atividades" language="pb" value="demais_atividades"/>
+            </choice>
+        </element>
+        <element choice="1" label="Tipo Pessoa" max_length="40" name="u_tipo_pessoa" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="PF" value="pf"/>
+                <element inactive_on_update="false" label="PF" language="pb" value="pf"/>
+                <element inactive_on_update="false" label="PJ" language="pb" value="pj"/>
+                <element inactive_on_update="false" label="PJ" value="pj"/>
+            </choice>
+        </element>
+        <element label="Valor Receita Operacional Bruta" max_length="15" name="u_valor_receita_operacional" type="string"/>
+    </element>
+</database>
